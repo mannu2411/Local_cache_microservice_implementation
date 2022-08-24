@@ -23,6 +23,7 @@ func main() {
 	router := chi.NewRouter()
 	router.Get("/add", srv.Add)
 	router.Get("/data", srv.Data)
+	router.Get("/pay", Payment)
 	httpPort := "8081"
 	log.Fatal(http.ListenAndServe(":"+httpPort, router))
 }
